@@ -14,7 +14,6 @@ vim.api.nvim_create_user_command("F", function()
   vim.cmd("CFormatter42")
   vim.cmd("w")
 end, {})
-
 -- empty setup using defaults
 require("nvim-tree").setup()
 

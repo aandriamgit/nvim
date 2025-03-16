@@ -13,6 +13,8 @@ lazy = false,
       { icon = " ", key = "q", desc = "Quit", action = ":qa" },
     },
     header =[[
+ 
+
            ┊       ┊   ┊    ┊        ┊                                                                              
            ┊       ┊   ┊   ˚★⋆｡˚  ⋆                                 　✦　˚                                          
            ┊       ┊   ⋆                                                                       ˚　                  
@@ -26,21 +28,20 @@ lazy = false,
 
                                    ˚　.　　　　　   . ✦　　　                          　˚　.                       
                                            　✦　　 　.　　.　　　✦　˚ 　  ˚       ˚   　✦　　　.　                  
+
     ]],
   },
   sections = {
-	  {section = "header"},
-    { section = "keys", gap = 1 },
+    {section = "header"},
+    { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1},
     {
-	pane = 2,
 	icon = " ",
 	title = "Projects",
 	section = "projects",
 	indent = 2,
-	padding = 2,
+	padding = 1,
 },
     {
-      pane = 2,
       icon = " ",
       title = "Git Status",
       section = "terminal",
@@ -48,10 +49,7 @@ lazy = false,
         return Snacks.git.get_root() ~= nil
       end,
       cmd = "git --no-pager diff --stat -B -M -C",
-      height = 5,
-      padding = 1,
-      ttl = 5 * 60,
-      indent = 3,
+      indent = 2,
     },
   },
     },
