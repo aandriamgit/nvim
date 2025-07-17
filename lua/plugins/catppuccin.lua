@@ -11,6 +11,7 @@ return {
 	  snacks = true,
 	  blink_cmp = true,
           treesitter = true,
+	  nvimtree = true,
 	  notify = true,
           native_lsp = {
             enabled = true,
@@ -31,6 +32,14 @@ return {
           which_key = true,
           indent_blankline = { enabled = true, scope_color = "lavender" },
         },
+	highlight_overrides = {
+       macchiato = function(mocha)
+         return {
+           NvimTreeNormal = { bg = mocha.none }, -- Example: Set background to none (transparent)
+           -- Add other highlight overrides here
+         }
+       end,
+     },
       })
       vim.cmd.colorscheme("catppuccin")
     end,
