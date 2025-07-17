@@ -46,3 +46,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         api.tree.find_file({ buf = vim.fn.bufnr() })
     end,
 })
+vim.diagnostic.config({
+  virtual_text = true,  -- Affiche les erreurs en ligne
+  underline = true,
+})
