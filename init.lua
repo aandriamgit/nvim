@@ -4,7 +4,7 @@ vim.opt.number = true
 vim.keymap.set("n", "<leader>/", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 vim.keymap.set("n", "F", ":CFormateur42<CR> <BAR> :w<CR>")
-set clipboard=unnamed
+vim.opt.clipboard = "unnamedplus"
 
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
