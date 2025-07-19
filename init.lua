@@ -31,9 +31,11 @@ require("nvim-tree").setup({
   },
 })
 vim.keymap.set('n', '<A-h>', '<C-w>h')
-vim.keymap.set('n', '<A-j>', '<C-w>j')
-vim.keymap.set('n', '<A-k>', '<C-w>k')
+vim.keymap.set('n', '<A-j>', '<C-w>h')
+vim.keymap.set('n', '<A-left>', '<C-w>h')
+vim.keymap.set('n', '<A-k>', '<C-w>l')
 vim.keymap.set('n', '<A-l>', '<C-w>l')
+vim.keymap.set('n', '<A-right>', '<C-w>l')
 vim.keymap.set('n', '<leader>vs', ':vsplit<CR>', { desc = 'Vertical Split' })
 vim.cmd("set termguicolors")
 vim.cmd("highlight WinSeparator guifg=#24273a")
