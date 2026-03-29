@@ -14,14 +14,14 @@ return {
     mason.setup()
 
     mason_lspconfig.setup({
-      ensure_installed = { "clangd" },
-    })
+      ensure_installed = { "clangd"
+      },
 
-    mason_lspconfig.setup_handlers({
-      function(server_name)
-        lspconfig[server_name].setup({})
-      end,
+      handlers = {
+        function(server_name)
+          lspconfig[server_name].setup({})
+        end,
+      },
     })
   end,
 }
-
