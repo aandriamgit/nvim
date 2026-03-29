@@ -6,6 +6,7 @@ return {
     config = function()
       require("catppuccin").setup({
         flavour = "macchiato",
+	transparent_background = true,
         integrations = {
 	  noice = true,
 	  snacks = true,
@@ -42,6 +43,20 @@ return {
      },
       })
       vim.cmd.colorscheme("catppuccin")
+      vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#a6da95" })
+      vim.api.nvim_set_hl(0, "PmenuSbar", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "FloatBorder", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "PopMenu", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#24273A", bg = "NONE" })
+      vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "NvimTreeNormalNC", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = "#24273A", bg = "NONE" })
+      vim.api.nvim_set_hl(0, "NvimTreeEndOfBuffer", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "NONE" })
     end,
   },
 }
