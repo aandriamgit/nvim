@@ -7,21 +7,15 @@ return {
   },
 
   config = function()
-    local lspconfig = require("lspconfig")
     local mason = require("mason")
     local mason_lspconfig = require("mason-lspconfig")
 
     mason.setup()
 
     mason_lspconfig.setup({
-      ensure_installed = { "clangd"
-      },
-
-      handlers = {
-        function(server_name)
-          lspconfig[server_name].setup({})
-        end,
-      },
+      ensure_installed = { "clangd" },
     })
+
+    vim.lsp.enable("gdscript")
   end,
 }
